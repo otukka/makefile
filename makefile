@@ -18,13 +18,16 @@ INC = $(patsubst %,-I%,$(inc))
 CFLAGS += $(INC)
 
 
-# all: release debug
-
-
 # order matters
-include release.mk
+include release.mk # The first targets comes from here, i.e. the default target.
 include debug.mk
 
+
+test: clean release debug run
+
+run:
+	@exec $(RELEASE_NAME)
+	@exec $(DEBUG_NAME)
 
 
 .PHONY: clean

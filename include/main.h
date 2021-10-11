@@ -1,7 +1,7 @@
 
 
 #ifndef MAIN_H_
-#define MAIN_H_ "Hello World!"
+#define MAIN_H_
 
 #ifndef MESSAGE
 #define MESSAGE "Hello World!"
